@@ -73,3 +73,26 @@ $(document).ready(function(){
         }
     });
 });
+
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok) {
+            form.reset();
+            alert('Thank you for your message! I will get back to you soon.');
+        } else {
+            alert('Oops! There was a problem submitting your form.');
+        }
+    } catch (error) {
+        alert('Oops! There was a problem submitting your form.');
+    }
+});
