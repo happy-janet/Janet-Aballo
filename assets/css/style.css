@@ -707,6 +707,7 @@ a:hover{
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
     -webkit-box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
+    height: 60%;
 }
 
 .project-card .title {
